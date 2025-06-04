@@ -23,7 +23,7 @@ public class PaddleMove : MonoBehaviour
         x = Input.GetAxis("Horizontal");
         _move = new Vector3(x * _PaddleSpeed * Time.deltaTime, 0f, 0f);
         _tf.position += _move;
-        clampedx = Mathf.Clamp(_tf.position.x, -10f, 10f);
+        clampedx = Mathf.Clamp(_tf.position.x, -7.5f, 7.5f);
         _tf.position = new Vector3(clampedx,_tf.position.y,0f);
     }
 }

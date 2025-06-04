@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a2d7487fee4c7c489430962fb8ac48c, type: 3}
+  m_Name: Paddle Speed
+  m_EditorClassIdentifier: 
+  _SkillName: "\u30D1\u30C9\u30EB\u901F\u5EA6\u4E0A\u6607"
+  _Description: "\u30D1\u30C9\u30EB\u306E\u30B9\u30D4\u30FC\u30C9\u304C1.1\u500D\u306B\u306A\u308B"
+  _icon: {fileID: 0}
+  _PaddleSpeedChanger: 1.1
