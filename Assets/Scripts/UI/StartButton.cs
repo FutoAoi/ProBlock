@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
-    public void onClickStartButton()
+    public void onClickStartButton()  //ボタンを押したら
     {
-        SceneManager.LoadScene("1");
+        SceneManager.LoadScene("1");  //"1"のシーンをロードする
     }
 }

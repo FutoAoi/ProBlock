@@ -7,10 +7,9 @@ public class DeadZone : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Ball"))
+        if (other.CompareTag("Ball"))  //もしタグが"Ball"のオブジェクトに当たったら
         {
-            Destroy(other.gameObject);
-            
+            Destroy(other.gameObject);  //Ballを消す
         }
     }
 }

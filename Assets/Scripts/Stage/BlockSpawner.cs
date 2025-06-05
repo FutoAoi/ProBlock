@@ -25,7 +25,7 @@ public class BlockSpawner : MonoBehaviour
             for (int hei = 0; hei < _Height; hei++)  //c‚Ì”‚¾‚¯ŒJ‚è•Ô‚·
             {
                 _Pos = new Vector2(_StartPos.x + wid * (_BlockSize.x + _spacing), _StartPos.y - hei * (_BlockSize.y + _spacing));
-                Instantiate(_BlockPrehab,_Pos, Quaternion.identity);
+                Instantiate(_BlockPrehab,_Pos, Quaternion.identity);  //ƒuƒƒbƒN‚ð¶¬‚·‚é
             }
         }
     }

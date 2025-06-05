@@ -6,7 +6,7 @@ public class BallController : MonoBehaviour
 {
     public float _BollSpeed = 5.0f;  //ボールの速度の変数
     Rigidbody2D _rb;  //Rigidbodyを取得するための箱
-    public float _SpeedChanger = 1.01f;  //速度変更の倍率
+    public float _SpeedChanger = 1.1f;  //速度変更の倍率
     public float _SpeedChangeSpan = 5f;  //速度変化の間隔
     float _time;  //速度変更してからの経過時間を測る変数
     void Start()
