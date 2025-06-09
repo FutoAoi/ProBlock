@@ -671,7 +671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _BollSpeed: 6
-  _SpeedChanger: 1.1
+  _SpeedChanger: 1.01
   _SpeedChangeSpan: 5
 --- !u!1 &409828487
 GameObject:
@@ -1446,6 +1446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f239a5e6c5dc4d1489529390b0d2aa4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StageClearReward: {fileID: 1968466932}
 --- !u!4 &755250931
 Transform:
   m_ObjectHideFlags: 0
@@ -2432,6 +2433,8 @@ GameObject:
   - component: {fileID: 1968466930}
   - component: {fileID: 1968466929}
   - component: {fileID: 1968466928}
+  - component: {fileID: 1968466933}
+  - component: {fileID: 1968466932}
   m_Layer: 5
   m_Name: SkillSerect
   m_TagString: Untagged
@@ -2524,6 +2527,45 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1968466932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968466927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86c5489f567d254a8294bd2e46728d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skillUI: {fileID: 1968466933}
+  _skillPool:
+  - {fileID: 11400000, guid: fd6a7815678b5dd42a46dc16384e90cc, type: 2}
+  - {fileID: 11400000, guid: f95730d2917b33d4495c1f0fe069ef8c, type: 2}
+  - {fileID: 11400000, guid: 6f3e281c026971c40b8e1bc3bbd24f5b, type: 2}
+  _nunberOfOptions: 3
+--- !u!114 &1968466933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968466927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12a5958eb219144e867d34a5175b1b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panel: {fileID: 1968466927}
+  _skillButtons:
+  - {fileID: 1958161858}
+  - {fileID: 84492506}
+  - {fileID: 218837362}
+  _candidateSkills:
+  - {fileID: 11400000, guid: fd6a7815678b5dd42a46dc16384e90cc, type: 2}
+  - {fileID: 11400000, guid: f95730d2917b33d4495c1f0fe069ef8c, type: 2}
+  - {fileID: 11400000, guid: 6f3e281c026971c40b8e1bc3bbd24f5b, type: 2}
 --- !u!1 &2096111345
 GameObject:
   m_ObjectHideFlags: 0
@@ -2554,8 +2596,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _BlockPrehab: {fileID: 6447973383334906140, guid: 09538854274c4e14590049e4e88e7e10, type: 3}
-  _Height: 3
-  _Width: 6
+  _Height: 2
+  _Width: 7
   _spacing: 0.05
 --- !u!4 &2096111347
 Transform:

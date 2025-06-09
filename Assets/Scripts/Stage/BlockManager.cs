@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BlockManager : MonoBehaviour
 {
+    [SerializeField] StageClearReward StageClearReward;
     private int _blockCount = 0;  //ブロックを数える変数
     public void AddBlock()  //ブロックの数を増やすメソッド
     {
@@ -16,12 +17,7 @@ public class BlockManager : MonoBehaviour
 
         if( _blockCount <= 0 )  //もしブロックの数が0より少ないなら
         {
-            LoadNextStage();  //LoadNextStageメソッドを使用する
+            StageClearReward.GiveReward(gameObject);
         }
-    }
-    void LoadNextStage()  //次のシーンをロードするメソッド
-    {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;  //今のシーンのインデックス番号を取得する
-        SceneManager.LoadScene( currentSceneIndex + 1 );  //今のインデクス番号のシーンの次のシーンを読み込む
     }
 }

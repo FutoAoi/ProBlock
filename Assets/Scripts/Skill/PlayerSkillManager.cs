@@ -13,4 +13,11 @@ public class PlayerSkillManager : MonoBehaviour
             skill.Activate(gameObject);  //スキルを使用する
         }
     }
+
+    public void LearnSkill(Skill newSkill)
+    {
+        var skillList = new System.Collections.Generic.List<Skill>(_LearnedSkills);
+        skillList.Add(newSkill);
+        _LearnedSkills = skillList.ToArray();
+    }
 }
