@@ -1,15 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PaddleMove : MonoBehaviour
 {
-    public float _PaddleSpeed = 10f;
+    public float _PaddleSpeed = 10f;  //パドルスピードの変数
 
-    Vector3 _move;
+    Vector3 moveX;  //
 
-    float x;
-    float clampedx;
+    float x;  //水平方向の処理の値を入れる変数
+    float y;  //垂直方向の処理の値を入れる変数
+    float clampedX;  //
+    float clampedY;
 
     Transform _tf;
     void Start()
@@ -20,10 +20,12 @@ public class PaddleMove : MonoBehaviour
 
     void Update()
     {
-        x = Input.GetAxis("Horizontal");
-        _move = new Vector3(x * _PaddleSpeed * Time.deltaTime, 0f, 0f);
-        _tf.position += _move;
-        clampedx = Mathf.Clamp(_tf.position.x, -7.5f, 7.5f);
-        _tf.position = new Vector3(clampedx,_tf.position.y,0f);
+        x = Input.GetAxisRaw("Horizontal");
+        y = Input.GetAxisRaw("Vertical");
+        float moveX = x * _PaddleSpeed * Time.deltaTime;
+        float moveY = y * _PaddleSpeed * Time.deltaTime;
+        clampedX = Mathf.Clamp(_tf.position.x + moveX, -7.5f, 7.5f);
+        clampedY = Mathf.Clamp(_tf.position.y + moveY, -4f, 4f);
+        _tf.position = new Vector3(clampedX, clampedY, 0f);
     }
 }

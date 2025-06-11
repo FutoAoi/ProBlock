@@ -14,7 +14,6 @@ public class BlockSpawner : MonoBehaviour
     void Start()
     {
         SpawnBlock();  //ゲーム開始時にブロックを置く
-        
     }
     void SpawnBlock()  //ブロックのスポーン処理
     {
